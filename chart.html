@@ -15,53 +15,71 @@
     <div>
         <canvas id="myChart2"></canvas>
     </div>
+    <div>
+        <canvas id="myChart3"></canvas>
+    </div>
    
     <script>
         var ctx = document.getElementById("myChart").getContext('2d');
-        ctx.canvas.height = 200;
+        ctx.canvas.height = 150;
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                //labels: ['1月', '2月', '3月'],
+                labels: ['', '', '','','','','','','','','',''],
                 datasets: [ 
                 {
-                    label: '入居者数',
-                    data: [6, 18, 28],
+                    label: '心拍数',
+                    data: [6, 3, 18, 3,4,34,3,2,42,32,23,3],
                     animation : true,
                     //...各設定
                 }]
             },
             options: {
-                responsive: true,
                 maintainAspectRatio: false,
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        stacked: false,
-                        gridLines: {
-                            display: false
-                        }
-                    }],
-                }
             }
         });
 
         var ctx2 = document.getElementById("myChart2").getContext('2d');
-        ctx2.canvas.height = 200;
+        ctx2.canvas.height = 150;
         var myChart2 = new Chart(ctx2, {
             type: 'line',
             data: {
-                labels: [1, 2, 4],
+                labels: ['', '', '','','','','','','','','',''],
                 datasets: [ 
                 {
-                    label: '入居者数',
-                    data: [6, 18, 28],
+                    label: 'ストレス',
+                    data: [6, 3, 18, 3,4,34,3,2,42,32,23,3],
                     animation : true,
                     //...各設定
                 }]
             },
             options: {
-                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        var ctx3 = document.getElementById("myChart3").getContext('2d');
+        ctx3.canvas.height = 150;
+        var myChart3 = new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['', '', '','','','','','','','','',''],
+                datasets: [ 
+                {
+                    label: '幸福',
+                    data: [6, 6, 0, 0,6,6,6,6,6,6,6,6],
+                    animation : true,
+                    //...各設定
+                },
+                {
+                    label: '怒り',
+                    backgroundColor: "rgba(255,0,0,0.4)",
+                    data: [0, 0, 6, 6,0,0,0,0,0,0,0,0],
+                    animation : true,
+                    //...各設定
+                }]
+            },
+            options: {
                 maintainAspectRatio: false
             }
         });
