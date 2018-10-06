@@ -22,7 +22,7 @@
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['1月', '2月', '3月'],
+                //labels: ['1月', '2月', '3月'],
                 datasets: [ 
                 {
                     label: '入居者数',
@@ -33,7 +33,16 @@
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        stacked: false,
+                        gridLines: {
+                            display: false
+                        }
+                    }],
+                }
             }
         });
 
